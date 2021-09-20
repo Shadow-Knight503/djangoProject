@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme_Topia</title>
+</head>
+<body>
+    <h2><u>Posts:</u></h2>
+    {% for post in posts %}
+    <div>
+        <h4>{{ post.Title }}</h4>
+        <img src="{{ post.Img.url }}" width="300px">
+    </div>
+    {% endfor %}
+</body>
+</html>
