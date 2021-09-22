@@ -7,9 +7,17 @@
 <body>
     <h2><u>Posts:</u></h2>
     {% for post in posts %}
-    <div>
-        <h4>{{ post.Title }}</h4>
-        <img src="{{ post.Img.url }}" width="300px">
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{ post.Img.url }}" alt="Post_Img">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{ post.Title }}<i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{ post.Title }}<i class="material-icons right">close</i></span>
+          <h4>Comments:</h4>
+        </div>
     </div>
     {% endfor %}
 </body>
